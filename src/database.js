@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const {MONGODB_HOST,MONGODB_DATABASE} = process.env;
-const mongodb_url = `mongodb://${MONGODB_HOST}/${MONGODB_DATABASE}`
+const {MONGODB_URL} = process.env;
+const mongodb_url = MONGODB_URL;
 mongoose.connect(mongodb_url,{
     useCreateIndex:true,
     useNewUrlParser:true,
